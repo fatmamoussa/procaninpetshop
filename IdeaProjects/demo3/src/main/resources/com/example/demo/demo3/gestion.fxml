@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@acceuil.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.demo3.ControllerGestion">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+
+
+
+
+         <children>
+            <Label layoutX="46.0" layoutY="114.0" text="welcome">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="99.0" layoutY="202.0" startX="-100.0" />
+            <Label fx:id="username" layoutX="70.0" layoutY="140.0" text="ali" />
+
+
+
+
+            <Button fx:id="homeBtn" layoutX="26.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleAcceuil" prefHeight="26.0" prefWidth="122.0" text="Home" />
+            <Button fx:id="achatBtn" layoutX="26.0" layoutY="282.0" mnemonicParsing="false" onAction="#handlePurchase" prefHeight="26.0" prefWidth="122.0" text="Purchase" />
+
+            <Button fx:id="logoutBtn" layoutX="26.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleLogout" text="logout" />
+            <AnchorPane layoutX="226.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" />
+            <TableView fx:id="petTableView" layoutX="200.0" layoutY="87.0" prefHeight="512.0" prefWidth="368.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="75.0" text="id" />
+                  <TableColumn fx:id="colRace" prefWidth="75.0" text="Breed" />
+                  <TableColumn fx:id="colSexe" prefWidth="75.0" text="Sexe" />
+                  <TableColumn fx:id="colAge" prefWidth="75.0" text="Age" />
+                  <TableColumn fx:id="colPrix" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="colQuantite" prefWidth="75.0" text="Quantité" />
+               </columns>
+            </TableView>
+            <AnchorPane layoutX="692.0" layoutY="14.0" prefHeight="575.0" prefWidth="392.0">
+               <children>
+                  <Label layoutX="55.0" layoutY="110.0" text="Breed:" />
+                  <Label layoutX="59.0" layoutY="148.0" text="Sexe:" />
+                  <TextField fx:id="race" layoutX="122.0" layoutY="106.0" />
+                  <Label layoutX="59.0" layoutY="184.0" text="Age:" />
+                  <Label layoutX="58.0" layoutY="217.0" text="Price:" />
+                  <Button fx:id="updateBtn" layoutX="226.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleUpdate" text="Update" />
+                  <Button fx:id="deleteBtn" layoutX="226.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="41.0" prefWidth="89.0" text="Delete" />
+                  <Button fx:id="clear" layoutX="71.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="41.0" prefWidth="89.0" text="Clear" />
+                  <Button fx:id="addBtn" layoutX="71.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="41.0" prefWidth="84.0" text="Add" />
+                  <TextField fx:id="age" layoutX="125.0" layoutY="180.0" />
+                  <TextField fx:id="quantite" layoutX="131.0" layoutY="248.0" />
+                  <!-- Corrected fx:id to "sexBox" -->
+                  <ComboBox fx:id="sexBox" layoutX="122.0" layoutY="144.0" prefWidth="150.0" promptText="Choose Sex">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Male" />
+                           <String fx:value="Female" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+                  <Label layoutX="58.0" layoutY="252.0" text="Quantité:" />
+                  <TextField fx:id="prix" layoutX="125.0" layoutY="213.0" />
+               </children>
+            </AnchorPane>
+            <HBox layoutX="200.0" layoutY="50.0" spacing="10">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../../../../drawble/i.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="searchField" prefHeight="26.0" prefWidth="325.0" promptText="Search..." />
+               </children>
+            </HBox>
+
+
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="26.0" layoutY="289.0">
+               <image>
+                  <Image url="@../../../../drawble/paw.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="66.0" layoutX="9.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../../../drawble/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="47.0" layoutX="54.0" layoutY="67.0">
+               <image>
+                  <Image url="@../../../../drawble/utilisateur.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="29.0" layoutY="234.0">
+               <image>
+                  <Image url="@../../../../drawble/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@acceuil.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.demo3.ControllerAcceuil">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="995.0">
+         <children>
+            <BorderPane layoutX="-14.0" layoutY="42.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="-42.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
+               <top>
+                  <AnchorPane prefHeight="631.0" prefWidth="1120.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="50.0" layoutY="114.0" prefHeight="178.0" prefWidth="899.0" styleClass="left_from" visible="false">
+                           <children>
+                              <AnchorPane layoutX="330.0" layoutY="31.0" prefHeight="115.0" prefWidth="257.0" styleClass="login">
+                                 <children>
+                                    <Label layoutX="102.0" layoutY="48.0" prefHeight="18.0" prefWidth="98.0" text="Total" textFill="#fcf4f4" />
+                                    <Label layoutX="226.0" layoutY="18.0" text="0.0$" textFill="#f2efef" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="628.0" layoutY="29.0" prefHeight="115.0" prefWidth="257.0" styleClass="login light-blue-bg" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="273.0" layoutY="33.0" prefHeight="123.0" prefWidth="265.0">
+                           <children>
+                              <Label layoutX="108.0" layoutY="49.0" text="Total" />
+                              <Label fx:id="totalLabel" layoutX="204.0" layoutY="21.0" text="0.0" />
+                              <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="7.0" layoutY="41.0">
+                                 <image>
+                                    <Image url="@../../../../drawble/argent.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="login light-blue-bg" />
+                              <String fx:value="light-blue-bg" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="55.0" layoutY="101.0" styleClass="login light-blue-bg" text="welcome">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="100.0" layoutX="100.0" layoutY="207.0" startX="-100.0" />
+                              <Label fx:id="welcomeLabel" layoutX="59.0" layoutY="127.0" />
+
+                              <Button fx:id="addBtn" layoutX="26.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="26.0" prefWidth="122.0" text="Add pet" />
+                              <Button fx:id="purchaseBtn" layoutX="26.0" layoutY="282.0" mnemonicParsing="false" onAction="#handlePurchase" prefHeight="26.0" prefWidth="122.0" text="Purchase" />
+                              <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="53.0" layoutY="37.0">
+                                 <image>
+                                    <Image url="@../../../../drawble/utilisateur.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="15.0" fitWidth="19.0" layoutX="33.0" layoutY="251.0">
+                                 <image>
+                                    <Image url="@../../../../drawble/plus.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="32.0" layoutY="290.0">
+                                 <image>
+                                    <Image url="@../../../../drawble/paw.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="90.0" fitWidth="113.0" layoutX="-13.0" layoutY="-45.0">
+                                 <image>
+                                    <Image url="@../../../../drawble/logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AreaChart fx:id="topPetsChart" layoutX="243.0" layoutY="217.0" prefHeight="358.0" prefWidth="798.0" title="Data chart" visible="true">
+                           <xAxis>
+                              <CategoryAxis label="Pet Name" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis label="Sold Quantity" side="LEFT" />
+                           </yAxis>
+                        </AreaChart>
+                        <AnchorPane layoutX="720.0" layoutY="37.0" prefHeight="115.0" prefWidth="252.0" styleClass="light-blue-bg">
+                           <children>
+                              <Label layoutX="93.0" layoutY="55.0" text="available pet " />
+                              <Label fx:id="availablePetLabel" layoutX="239.0" layoutY="14.0" text="0.0" />
+                              <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="21.0" layoutY="61.0">
+                                 <image>
+                                    <Image url="@../../../../drawble/paw.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="logoutBtn" layoutX="39.0" layoutY="528.0" mnemonicParsing="false" onAction="#handleLogout" text="logout" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

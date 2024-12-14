@@ -1,0 +1,127 @@
+/* Styling for buttons */
+.button {
+    -fx-background-color: #3399ff; /* Blue color */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #0066cc; /* Darker blue on hover */
+}
+
+/* Styling for the labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
+
+/* Styling for the welcome text */
+#welcomeLabel {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a90e2;
+}
+
+/* Styling for the area charts */
+.chart {
+    -fx-background-color: #f7f7f7;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 2px;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 8px;
+}
+
+/* Add a shadow effect to the overall page */
+.stack-pane {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0.0, 0, 5);
+}
+
+/* Styling for the navigation bar */
+#logoutBtn {
+    -fx-background-color: #005f99; /* Logout button in blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+}
+
+/* Other general UI enhancements */
+AnchorPane {
+    -fx-background-color: #f9f9f9; /* Light background */
+}
+
+#totalLabel {
+    -fx-font-size: 18px;
+    -fx-text-fill: #2c3e50;
+}
+
+#addBtn {
+    -fx-background-color: #3399ff; /* Blue button for Add Pet */
+}
+
+/* Ajout d'un cadre plus grand et plus joli autour des sections Total et Available Pet */
+.total, .availablePet {
+    -fx-border-color: #3399ff; /* Bordure bleue */
+    -fx-border-width: 4px;  /* Largeur de la bordure agrandie */
+    -fx-padding: 15px;      /* Espacement interne agrandi */
+    -fx-background-color: #f8f8f8; /* Fond clair */
+    -fx-background-radius: 12px; /* Coins arrondis plus accentués */
+    -fx-effect: innershadow(gaussian, rgba(51, 153, 255, 0.5), 10, 0.5, 0, 0); /* Ombre interne pour plus de profondeur */
+}
+
+/* Ajouter un léger dégradé en arrière-plan pour un effet moderne */
+.total, .availablePet {
+    -fx-background-color: linear-gradient(to bottom, #f8f8f8, #d6eaff);
+}
+
+/* Optionnel : Ajouter une animation lors du survol pour rendre les éléments plus interactifs */
+.total:hover, .availablePet:hover {
+    -fx-border-color: #0066cc; /* Bordure bleue plus foncée au survol */
+    -fx-border-width: 5px;     /* Bordure plus épaisse lors du survol */
+    -fx-effect: dropshadow(gaussian, #0066cc, 10, 0.5, 0, 0); /* Ombre de bordure au survol */
+}
+
+/* Style pour la TableView */
+.table-view {
+    -fx-background-color: #e6f2ff; /* Fond bleu clair pour le tableau */
+    -fx-padding: 5px; /* Espacement intérieur pour un effet aéré */
+    -fx-border-color: transparent; /* Pas de bordure extérieure */
+    -fx-border-width: 0; /* Aucune bordure */
+    -fx-font-size: 14px; /* Taille de police plus petite et lisible */
+}
+
+/* Style pour les en-têtes de colonnes */
+.table-view .column-header {
+    -fx-background-color: #99ccff; /* Fond bleu doux pour l'en-tête */
+    -fx-text-fill: #003366; /* Texte foncé pour les en-têtes */
+    -fx-font-weight: bold; /* Texte en gras pour l'en-tête */
+}
+
+/* Style pour les cellules de la TableView */
+.table-view .table-cell {
+    -fx-background-color: #ffffff; /* Fond blanc pour les cellules */
+    -fx-text-fill: #003366; /* Texte de couleur foncée dans les cellules */
+    -fx-padding: 5px; /* Espacement intérieur des cellules */
+}
+
+/* Style lorsque la ligne est sélectionnée */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #3399ff; /* Fond bleu vif pour la ligne sélectionnée */
+    -fx-text-fill: white; /* Texte blanc lors de la sélection */
+}
+
+/* Style pour les bordures des cellules (optionnel, pour une séparation subtile) */
+.table-view .table-cell {
+    -fx-border-color: #99ccff; /* Bordure bleu clair entre les cellules */
+    -fx-border-width: 0 0 1px 0; /* Bordure fine en bas des cellules */
+}
+.light-blue-bg {
+    -fx-background-color: lightblue;
+    -fx-border-color: #b0c4de; /* Optionnel : bordure */
+    -fx-border-width: 2px;    /* Optionnel : largeur de la bordure */
+    -fx-background-radius: 5px; /* Optionnel : coins arrondis */
+}

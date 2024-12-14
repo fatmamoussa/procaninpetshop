@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="main_form" prefHeight="430.0" prefWidth="300.0" styleClass="left_from" stylesheets="@acceuil.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.demo3.ControllerSignup">
+   <children>
+      <AnchorPane layoutX="310.0" layoutY="13.0" prefHeight="430.0" prefWidth="300.0">
+         <children>
+            <PasswordField fx:id="password" layoutX="52.0" layoutY="215.0" prefHeight="30.0" prefWidth="220.0" promptText="password" />
+            <Button fx:id="signup" layoutX="52.0" layoutY="302.0" mnemonicParsing="false" onAction="#signupAction" prefHeight="40.0" prefWidth="220.0" styleClass="login" stylesheets="@acceuil.css" text="s 'inscrire" />
+            <TextField fx:id="username" layoutX="52.0" layoutY="180.0" prefHeight="26.0" prefWidth="220.0" promptText="username" />
+            <PasswordField fx:id="password1" layoutX="52.0" layoutY="252.0" prefHeight="30.0" prefWidth="220.0" promptText="confirmation " />
+            <Hyperlink fx:id="inscrire" layoutX="121.0" layoutY="372.0" onAction="#goToSignup" text="login " />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="443.0" fitWidth="326.0" layoutX="-2.0" layoutY="-3.0">
+         <image>
+            <Image url="@../../../../drawble/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
